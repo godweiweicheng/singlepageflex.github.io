@@ -1,0 +1,199 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+#wrapper {
+    background-color: #ddd;
+}
+
+
+.page {
+    height: auto;
+    min-height: 100vh;
+    padding: 60px 10px;
+    background-color: #eee;
+}
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    background-color: black;
+    display: block;
+    width: 100vw;
+    z-index: 10;
+    
+
+}
+
+#navbar nav {
+    display: flex;
+}
+#navbar nav a {
+    flex: 0 0 25vw;
+    text-align: center;
+    font-size: 2em;
+    color: #eee;
+    height: 60px;
+    line-height: 2em;
+    cursor: pointer;
+}
+
+#navbar nav a:hover {
+    background-color: #222;
+    color:white;
+}
+
+.jumbotron {
+    background-color: rgba(255, 255, 255, 0.098);
+    width: 80%;
+    margin: 100px auto;
+    border: 5px solid white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+.jumbotron h2 {
+    text-transform: uppercase;
+    font-size: 3em;
+    color: black;
+}
+.jumbotron h3 {
+    font-size:2em ;
+    color: #222;
+}
+#home {
+    background-image: url("https://images.pexels.com/photos/3732658/pexels-photo-3732658.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+}
+.row  {
+    display:flex;
+}
+.col {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 100vh;
+    
+    
+}
+.main {
+    background-color: white;
+    min-height: 60vh;
+    padding: 10px;
+    font-size: 1.2em;
+    
+    
+}
+.page>h2 {
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding: 8px;
+    font-size: 3em;
+}
+.card {
+    flex: 0 0 33%;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px  solid  white;
+    padding: 20px;
+    margin: 10px 0;
+}
+.card img{
+    max-width: 100%;
+}
+.cards {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2em;
+
+}
+.card .output > button {
+    background-color: lightgray;
+    border: 0;
+    color: white;
+    padding: 10px;
+     width: 100%;
+}
+.myForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 500px;
+    text-align: left;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+.myForm .subject ,.myForm .message {
+    width:80%;
+    margin: 0 auto;
+}
+label {
+    display: block;
+    color: white;
+}
+.rowForm {
+    display: flex;
+    justify-content: space-between;
+   
+    width: 80%;
+    margin: 0 auto;
+}
+.rowForm .name, .rowForm .email{
+    display: inline-block;
+    width:45%;
+    
+}
+#email,#name,#subject {
+    width: 100%;
+    height: 50px;
+    font-size: 1.2em;
+}
+#message {
+    width:100%;
+}
+.message button {
+    height: 70px;
+    width: 100%;
+    background-color: salmon;
+    font-size: 2em;
+}
+.footer {
+    min-height: 200px;
+    text-align: center;
+    color: #eee;
+    font-size: 1em;
+    padding: 20px;
+    background-color: black;
+}
+@media all and (max-width:640px){
+    #navbar nav a {
+        font-size:1.2em;
+        height: 30px;
+         
+    }
+    #navbar {
+        height: 30px;
+    }
+    .row,.rowForm {
+        flex-direction: column;
+    }
+    .card {
+        flex: auto;
+    }
+    .rowForm .name, .rowForm .email{
+        display: block;
+        width:100%;
+        
+    }
+}
